@@ -1,0 +1,223 @@
+:root {
+  --string-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --fs-small: 17px;
+  --fs-large: 24px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Mono", monospace;
+  background: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+.title {
+  color: var(--dark-grayish-cyan);
+}
+input {
+  width: 100%;
+  margin-top: 0.5rem;
+  border: none;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  text-align: right;
+  font-size: var(--fs-large);
+  background: var(--very-light-grayish-cyan);
+}
+input:focus {
+  outline: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.container .main-title {
+  font-size: var(--fs-large);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 5px;
+}
+.main-block {
+  background: white;
+  width: 100%;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-section .top .title {
+  font-size: var(--fs-small);
+}
+.top {
+  margin-bottom: 1rem;
+}
+.top .bill-input {
+  position: relative;
+  width: 100%;
+}
+.bill-input input {
+  padding: 0.5rem 1.5rem;
+}
+.top .bill-input img {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+.top .bill-input .bill-amount {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  font-size: 24px;
+  transform: translateY(-50%);
+}
+
+.middle {
+  margin-bottom: 1rem;
+}
+.middle .title {
+  font-size: var(--fs-small);
+}
+.tip-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.percent-tip-container {
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  width: 45%;
+  margin: 0.5rem;
+  background: var(--very-dark-cyan);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.percent-tip-container .percent-tip {
+  font-size: 24px;
+  font-weight: 700;
+}
+.percent-tip-container .percent-tip-input {
+  text-align: center;
+  /* font-size: 15px; */
+  /* font-weight: 100; */
+}
+.tip-container .custom {
+  background: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  padding: 0.5rem 0.3rem;
+}
+
+.bottom {
+  margin-bottom: 1rem;
+}
+.bottom .title {
+  font-size: var(--fs-small);
+}
+.bottom .people-count-container {
+  position: relative;
+}
+.people-count-container input {
+  padding: 0.5rem 1.5rem;
+}
+.people-count-container img {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+.people-count-container .count {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.bottom .err-msg {
+  color: red;
+}
+
+.result-section {
+  background: var(--very-dark-cyan);
+  font-size: var(--fs-small);
+  padding: 1.3rem 1rem;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.result-section .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.result-section .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title-container .title {
+  color: white;
+}
+.title-container .desc {
+  color: var(--dark-grayish-cyan);
+}
+.result-section .total,
+.result-section .tip {
+  color: var(--string-cyan);
+  font-size: var(--fs-large);
+}
+.result-section .reset-btn {
+  background: var(--string-cyan);
+  border: none;
+  color: var(--very-dark-cyan);
+  font-size: var(--fs-large);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.active {
+  background: var(--string-cyan);
+  color: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    padding: 3rem 4rem;
+  }
+  .container .main-block {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 2rem;
+  }
+  .result-section .container {
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
+  .main-block section {
+    flex: 50%;
+  }
+  .percent-tip-container {
+    width: 28%;
+    padding: 0.5rem 2rem;
+  }
+  .result-section .reset-btn {
+    margin-top: auto;
+  }
+}

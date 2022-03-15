@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+    </style>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <span class="main-title"
+        >SPLI <br />
+        TTER</span
+      >
+      <div class="main-block">
+        <section class="input-section">
+          <article class="top">
+            <span class="title">Bill</span>
+            <div class="bill-input">
+              <input type="text" class="bill-input-value" />
+              <img src="./images/icon-dollar.svg" alt="dollar sign" />
+            </div>
+          </article>
+          <article class="middle">
+            <span class="title">Select Tip %</span>
+            <div class="tip-container">
+              <div class="percent-tip-container">
+                <span class="percent-tip">5%</span>
+              </div>
+              <div class="percent-tip-container">
+                <span class="percent-tip">10%</span>
+              </div>
+              <div class="percent-tip-container">
+                <span class="percent-tip">15%</span>
+              </div>
+              <div class="percent-tip-container">
+                <span class="percent-tip">25%</span>
+              </div>
+              <div class="percent-tip-container">
+                <span class="percent-tip">50%</span>
+              </div>
+              <div class="percent-tip-container custom">
+                <input
+                  type="text"
+                  class="percent-tip-input"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+          </article>
+          <article class="bottom">
+            <span class="title">Number of People</span>
+            <div class="people-count-container">
+              <input type="text" />
+              <img src="./images/icon-person.svg" alt="person sign" />
+            </div>
+            <span class="err-msg"></span>
+          </article>
+        </section>
+        <section class="result-section">
+          <div class="tip-container container">
+            <div class="title-container">
+              <span class="title">Tip Amount</span>
+              <span class="desc">/person</span>
+            </div>
+            <span class="tip"></span>
+          </div>
+          <div class="total-container container">
+            <div class="title-container">
+              <span class="title">Total</span>
+              <span class="desc">/person</span>
+            </div>
+            <span class="total"></span>
+          </div>
+          <button class="reset-btn">RESET</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
